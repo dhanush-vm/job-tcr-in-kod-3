@@ -11,23 +11,39 @@ export default {
     },
     extend: {
       colors: {
-        background: '#F7F6F3',
-        foreground: '#111111',
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: '#8B0000', // Deep Red
-          foreground: '#FFFFFF',
+          DEFAULT: "hsl(245, 58%, 51%)",
+          foreground: "#ffffff",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: '#E5E5E5',
-          foreground: '#737373',
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: '#F7F6F3', // Using background as accent base for now, or maybe a slightly darker shade? User said max 4 colors.
-          foreground: '#111111',
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
-        success: '#4A6F44', // Muted Green
-        warning: '#B48439', // Muted Amber
-        border: '#E5E5E5',
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
       },
       spacing: {
         '0': '0px',
