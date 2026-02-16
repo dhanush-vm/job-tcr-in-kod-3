@@ -15,6 +15,11 @@ import {
 } from './pages/Placeholders';
 import RBStepPage from './pages/RB/RBStepPage';
 import RBProofPage from './pages/RB/RBProofPage';
+import ResumeLayout from './pages/Resume/ResumeLayout';
+import ResumeHome from './pages/Resume/ResumeHome';
+import ResumeBuilder from './pages/Resume/ResumeBuilder';
+import ResumePreview from './pages/Resume/ResumePreview';
+import ResumeProof from './pages/Resume/ResumeProof';
 
 function App() {
   return (
@@ -41,9 +46,16 @@ function App() {
           <Route path="/rb/04-hld" element={<RBStepPage stepNumber={4} />} />
           <Route path="/rb/05-lld" element={<RBStepPage stepNumber={5} />} />
           <Route path="/rb/06-build" element={<RBStepPage stepNumber={6} />} />
-          <Route path="/rb/07-test" element={<RBStepPage stepNumber={7} />} />
           <Route path="/rb/08-ship" element={<RBStepPage stepNumber={8} />} />
           <Route path="/rb/proof" element={<RBProofPage />} />
+
+          {/* Resume Builder App */}
+          <Route path="/resume" element={<ResumeLayout />}>
+            <Route index element={<ResumeHome />} />
+            <Route path="builder" element={<ResumeBuilder />} />
+            <Route path="preview" element={<ResumePreview />} />
+            <Route path="proof" element={<ResumeProof />} />
+          </Route>
         </Route>
 
         <Route path="*" element={<Navigate to="/" replace />} />
